@@ -11,7 +11,8 @@
 ```
 
 ## hasil
-![image](asetremd/s1.png)
+
+![image](s1.jpg)
 
 ## Analisis
 1. Tabel yang dibuat bernama "tabel_guru" dengan menggunakan perintah `CREATE TABLE`.
@@ -42,7 +43,7 @@ values (1, "Adrianty", null, "Pemograman web","Ketua jurusan", 34, "1982-06-29")
 
 ```
 ## hasil
-![image](asetremd/s2.png)
+![image](s2.jpg)
 
 ## Analisis
 Perintah `INSERT INTO` digunakan untuk memasukkan data ke dalam tabel `tabel_guru`. Pada perintah ini, kita memasukkan empat baris data ke dalam tabel dengan menggunakan perintah `VALUES`.
@@ -96,7 +97,7 @@ values (5,"hansar", null, "Bahasa indonesia", null, 17,"2006-06-06);
 ```
 
 ## Hasil
-![image](asetremd/s3.png)
+![image](s3.jpg)
 
 ## Analisis
 - `id_guru`: 5
@@ -119,7 +120,7 @@ select * from tabel_guru;
 ```
 
 ## Hasil
-![image](asetremd/s4.png)
+![image](s4.jpg)
 ## Analisis
 Hasil dari perintah `SELECT *` akan menampilkan semua kolom dan nilai-nilai yang ada dalam tabel `tabel_guru`.
 
@@ -131,7 +132,7 @@ select * from tabel_guru
 where id_guru = "4";
 ```
 ## Hasil
-![image](asetremd/s5.png)
+![image](s5.jpg)
 ## Analisis
 dari perintah `SELECT *` dengan kondisi `WHERE id_guru = "4"` akan bergantung pada data yang ada dalam tabel tersebut. Jika terdapat baris dengan nilai `id_guru` sama dengan "4", maka baris tersebut akan dipilih dan ditampilkan.
 
@@ -142,7 +143,7 @@ update tabel_guru set nama_belakang="ganteng" where id_guru="2";
 ```
 ## Hasil
 
-![image](asetremd/s6.png)
+![image](s6.jpg)
 
 ## Analisis
 1. `UPDATE tabel_guru`: Mengindikasikan bahwa kita akan melakukan operasi pembaruan (update) pada tabel `tabel_guru`.
@@ -157,7 +158,9 @@ Jika terdapat baris dalam tabel `tabel_guru` dengan `id_guru` sama dengan "2", m
 delete from tabel_guru id_guru=5;
 ```
 ## Hasil
-![image](asetremd/s7.png)
+
+![image](S7.jpg)
+
 ## Analisis
 1. `DELETE FROM tabel_guru`: Mengindikasikan bahwa kita akan melakukan operasi penghapusan (delete) pada tabel `tabel_guru`.
 2. `WHERE id_guru = 5`: Menentukan kondisi untuk baris data yang akan dihapus. Hanya baris dengan nilai `id_guru` sama dengan 5 yang akan dihapus.
@@ -172,7 +175,7 @@ where mapel LIKE 'pem%' and usia <30
 ORDER BY usia ASC;
 ```
 ## Hasil
-![image](asetremd/s8.png)
+![image](s8.jpg)
 ## Analisis
 1. `SELECT * FROM tabel_guru`: Mengindikasikan bahwa kita akan mengambil semua kolom dan data dari tabel `tabel_guru`.
 2. `WHERE mapel LIKE 'pem%' AND usia < 30`: Menentukan kondisi untuk pengambilan data. Hanya baris yang memenuhi kondisi tersebut yang akan ditampilkan. Kondisi ini memfilter data dengan dua syarat: kolom `mapel` dimulai dengan kata "pem" dan kolom `usia` kurang dari 30.
@@ -187,7 +190,7 @@ where nama_depan LIKE '_%i%';
 ```
 
 ## Hasil
-![image](asetremd/s9.png)
+![image](s9.jpg)
 ## Analisis
 1. `SELECT id_guru, nama_depan FROM tabel_guru`: Mengindikasikan bahwa kita akan mengambil kolom `id_guru` dan `nama_depan` dari tabel `tabel_guru`.
 2. `WHERE nama_depan LIKE '_%i%'`: Menentukan kondisi untuk pengambilan data. Hanya baris yang memenuhi kondisi tersebut yang akan ditampilkan. Kondisi ini memfilter data dengan satu syarat: kolom `nama_depan` mengandung karakter "i" di suatu posisi kecuali di awal kata, karena pola '_%i%' mengharuskan ada minimal satu karakter sebelum "i".
@@ -200,7 +203,7 @@ Hasil dari perintah `SELECT id_guru, nama_depan` dengan kondisi `WHERE nama_depa
 select concat_ws("",nama_depan, nama_belakang) AS nama_lengkap from tabel_guru;
 ```
 ## Hasil
-![image](asetremd/s10.png)
+![image](s10.jpg)
 ## Analisis 
 1. `SELECT CONCAT_WS("", nama_depan, nama_belakang) AS nama_lengkap`: Mengindikasikan bahwa kita akan membuat kolom baru yang disebut `nama_lengkap` dengan menggabungkan (concatenating) nilai dari kolom `nama_depan` dan `nama_belakang` dalam tabel `tabel_guru` menggunakan fungsi `CONCAT_WS()`. Fungsi `CONCAT_WS()` digunakan untuk menggabungkan nilai-nilai kolom dengan pemisah yang ditentukan di dalam tanda kutip kosong ("").
 2. `FROM tabel_guru`: Menunjukkan bahwa kita akan mengambil data dari tabel `tabel_guru`.
@@ -213,7 +216,7 @@ alter table tabel_guru
 add status enum("PNS", "pppk", "Honorer");
 ```
 ## Hasil
-![image](asetremd/s11.png)
+![image](s11.jpg)
 ## Analisis
 1. `ALTER TABLE tabel_guru`: Mengindikasikan bahwa kita akan mengubah struktur tabel `tabel_guru`.
 2. `ADD status ENUM("PNS", "pppk", "Honorer")`: Menentukan perubahan yang akan dilakukan pada tabel. Perintah `ADD` digunakan untuk menambahkan kolom baru ke dalam tabel, dalam hal ini `status`. Tipe data kolom baru ini adalah `ENUM`, yang berarti nilainya terbatas pada sekumpulan nilai yang telah ditentukan. Nilai-nilai yang diperbolehkan untuk kolom `status` adalah "PNS", "pppk", dan "Honorer".
@@ -227,7 +230,7 @@ select nama_depan, max(usia) as usia from tabel_guru;
 ```
 
 ## Hasil
-![image](asetremd/s12.png)
+![image](s12.jpg)
 
 ## Analisis
 1. `SELECT nama_depan, MAX(usia) AS usia`: Mengindikasikan bahwa kita akan mengambil kolom `nama_depan` dan nilai maksimum dari kolom `usia` dalam tabel `tabel_guru`. Alias `AS usia` digunakan untuk memberi nama kolom hasil agregasi (nilai maksimum) sebagai "usia".
